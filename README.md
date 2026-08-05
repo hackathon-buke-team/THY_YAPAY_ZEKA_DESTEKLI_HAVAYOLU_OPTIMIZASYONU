@@ -214,13 +214,15 @@ python src/04_export_docs.py           # teslim dokümanları: .md -> .docx -> .
 
 ## Final sunumu materyalleri
 
-Finale hazırlık için üretilen ek dokümanlar (`docs/` ve `preaudit/`):
+Finale hazırlık için üretilen ek dokümanlar (`docs/` ve `preaudit/`). **Okuma sırası aşağıdaki gibidir:**
 
-| Dosya | İçerik |
-|---|---|
-| `docs/Buke_ANLAMA_ve_ANLATMA_Kilavuzu.docx` / `.pdf` | **34 sayfa.** Projeyi sıfırdan anlatan kılavuz: havayolu işi → optimizasyon kavramları → veri → model → **kod satır satır** → neden bu kararlar (HiGHS/Gurobi/Pyomo tercihleri) → projenin hikâyesi → sunum senaryosu → 23 soruluk öz-değerlendirme. |
-| `docs/Buke_FINAL_Sunum_Hazirlik_Dosyasi.docx` / `.pdf` | **61 sayfa.** Referans dosyası: tam matematiksel model, doğrusallaştırma kararları, sonuçların tam sayısal dökümü, doğrulama, duyarlılık, zayıflıklar ve **51 jüri sorusu + hazır cevap**. |
-| `preaudit/` | Final öncesi **öz-denetim betikleri**. Çözümü, üreten koddan bağımsız olarak yeniden ölçer (baseline, kapasite, rotasyon kapsamı, ürün kalitesi, rakip yenme marjları). Bulgular kılavuzun §13.11 bölümünde. |
+| # | Dosya | Sayfa | İçerik |
+|---|---|---|---|
+| 1 | `docs/Buke_ON_BILGI_DERSI.docx` / `.pdf` | 12 | **Ön koşul.** Hiçbir ön bilgi varsaymayan konu anlatımı: bir havayolu nasıl çalışır (hub ekonomisi, dalga yapısı, rotasyon, tarife planlama süreci, terimler) → optimizasyon nedir (**elle çözülen LP/tamsayı/branch-and-bound/big-M örnekleriyle**) → projenin sembol sözlüğü ve karıştırılan kavramlar → yarışma bağlamı, okuma haritası, takım rol dağılımı. |
+| 2 | `docs/Buke_ANLAMA_ve_ANLATMA_Kilavuzu.docx` / `.pdf` | 34 | Projeyi sıfırdan anlatan kılavuz: veri → model → **kod satır satır (11 gerçek blok)** → karar günlüğü (**neden HiGHS, neden Gurobi değil**, neden Pyomo, neden MIP) → **projenin hikâyesi: karşılaşılan 10 problem** → sunum senaryosu → 23 soruluk öz-test. |
+| 3 | `docs/Buke_JURI_SORU_BANKASI.docx` / `.pdf` | 21 | **59 zorlayıcı jüri sorusu**, sekiz mercekte gruplu (model, çözüm kalitesi, ön-denetim, veri, operasyon, yazılım, ileri seviye, tuzak). Her soru için: neden zor, hazır cevap, dayanak dosyası. |
+| 4 | `docs/Buke_FINAL_Sunum_Hazirlik_Dosyasi.docx` / `.pdf` | 61 | Referans dosyası: tam matematiksel model, doğrusallaştırma kararları, sonuçların tam sayısal dökümü, doğrulama, duyarlılık, zayıflıklar ve **§13.11 ÖN-DENETİM bulguları**. |
+| + | `preaudit/` | — | Final öncesi **öz-denetim betikleri**. Çözümü, üreten koddan bağımsız olarak yeniden ölçer (baseline, kapasite, rotasyon kapsamı, ürün kalitesi, rakip yenme marjları). |
 
 > Öz-denetimin en önemli iki bulgusu şeffaflık adına burada da belirtilir:
 > **(1)** Baseline bağlantı boşluklarını ham dakika hassasiyetiyle, model ise 10 dk ızgarada
