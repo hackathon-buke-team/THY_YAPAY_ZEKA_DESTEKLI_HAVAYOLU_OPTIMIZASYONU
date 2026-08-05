@@ -1,0 +1,26 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# --- Isletim sistemi ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor ---
+.vscode/
+.idea/
+*.swp
+
+# --- Telifli 3. taraf materyali (organizatorun brief/sunum PDF'leri) ---
+# Depoya DAHIL EDILMEZ; yerelde durur.
+references/
+
+# --- Gecici / office kilit dosyalari ---
+~$*
+*.tmp

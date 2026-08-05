@@ -1,0 +1,13 @@
+# THY Tarife Optimizasyonu — çalışma zamanı bağımlılıkları
+# Doğrulanmış ortam: Python 3.13, Windows 11 (bkz. README "Kurulum")
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1
+pyomo>=6.7        # model API'si bu sürümde sabit; appsi_highs arayüzü kullanılır
+highspy>=1.7      # HiGHS çözücüsü (açık-kaynak)
+matplotlib>=3.7   # rapor figürleri (src/06_make_figures.py)
+
+# Opsiyonel — yalnız teslim dokümanlarını DOCX/PDF'e çevirmek için (src/04_export_docs.py):
+# pypandoc_binary   (pandoc ikiliğini getirir; .md → .docx)
+# PDF, yüklü Microsoft Word üzerinden otomatik üretilir. pypandoc/Word yoksa 04 adımı
+# uyarı verip ATLANIR (koşu durmaz); teslimdeki hazır .docx/.pdf'ler geçerli kalır.
