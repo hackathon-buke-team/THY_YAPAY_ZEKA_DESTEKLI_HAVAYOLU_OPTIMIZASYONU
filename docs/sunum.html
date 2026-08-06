@@ -103,6 +103,22 @@ h1 span{color:var(--accent)}
 .kbd-hint{position:absolute;right:84px;bottom:70px;font-size:13px;color:var(--muted);z-index:3}
 .kbd-hint b{font-family:var(--mono);color:var(--ink2);background:var(--surface2);border:1px solid var(--hair2);
   border-radius:6px;padding:2px 8px;font-weight:400}
+/* kapak · takım şeridi — fotoğraflar sonra eklenecek (.ava içine <img>) */
+#team{position:absolute;right:84px;top:50px;z-index:3;
+  background:rgba(10,15,30,.72);border:1px solid var(--hair2);border-radius:16px;
+  padding:16px 22px 18px;backdrop-filter:blur(5px)}
+#team .t-label{font-family:var(--disp);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink2);display:flex;align-items:center;gap:10px;margin-bottom:13px}
+#team .t-label::before{content:'';width:20px;height:3px;background:var(--accent);border-radius:2px}
+#team .t-grid{display:grid;grid-template-columns:auto auto;gap:11px 28px}
+.tm{display:flex;align-items:center;gap:13px}
+.tm .ava{width:54px;height:54px;border-radius:50%;flex:none;position:relative;overflow:hidden;
+  background:var(--surface2);border:1.5px dashed var(--hair2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--disp);font-size:14px;font-weight:700;color:var(--muted);letter-spacing:.05em}
+.tm .ava img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.tm .ava:has(img){border-style:solid;border-color:var(--hair2)}
+.tm .nm{font-family:var(--disp);font-size:16px;font-weight:600;color:var(--ink);white-space:nowrap}
 /* rota haritası */
 .route{fill:none;stroke:var(--blue);stroke-width:1.6;opacity:.55}
 .route.main{stroke:var(--accent);stroke-width:2.6;opacity:1}
@@ -228,7 +244,6 @@ h1 span{color:var(--accent)}
     <p class="cover-sub rv" style="--d:.35s">İstanbul hub'ında 4.554 uçuş hareketinin saatini,
       matematiksel <strong style="color:var(--ink)">kanıtla</strong> yeniden yazan MIP çözümü.</p>
     <div class="cover-chips rv" style="--d:.45s">
-      <span class="chip"><b>Takım Büke</b></span>
       <span class="chip">Python · Pyomo · HiGHS</span>
       <span class="chip">%100 açık kaynak</span>
       <span class="chip mono">python run_all.py → tek komut</span>
@@ -238,6 +253,18 @@ h1 span{color:var(--accent)}
       <div class="cs"><div class="v">%1,18</div><div class="l">kanıtlı global optimalite boşluğu</div></div>
       <div class="cs"><div class="v">18/18</div><div class="l">bağımsız doğrulama · PASS</div></div>
       <div class="cs"><div class="v">0</div><div class="l">kısıt ihlali</div></div>
+    </div>
+  </div>
+  <!-- TAKIM ŞERİDİ · FOTOĞRAF EKLEME: her .ava dairesinin içine bir satır ekleyin, örn.
+       <div class="ava"><img src="foto/melih.jpg" alt="Melih Ekizce">ME</div>
+       Fotoğraf daireyi otomatik doldurur (kare kırpılmış ≥200×200 px önerilir) ve baş harfleri örter. -->
+  <div id="team" class="rv" style="--d:.62s">
+    <div class="t-label">Takım Büke</div>
+    <div class="t-grid">
+      <div class="tm"><div class="ava">ME</div><div class="nm">Melih Ekizce</div></div>
+      <div class="tm"><div class="ava">MI</div><div class="nm">Mustafa Eren Işıktaşlı</div></div>
+      <div class="tm"><div class="ava">SÖ</div><div class="nm">Serhat Özdemir</div></div>
+      <div class="tm"><div class="ava">MA</div><div class="nm">Mert Arı</div></div>
     </div>
   </div>
   <div class="kbd-hint rv" style="--d:.7s"><b>→</b> ilerle &nbsp; <b>←</b> geri &nbsp; <b>Esc</b> genel bakış</div>
