@@ -1,4 +1,4 @@
-# THY Tarife Optimizasyonu — Rakip Odaklı Ağ Optimizasyonu
+# THY Tarife Optimizasyonu — Rakip Odaklı Ağ Optimizasyonu / Teknofest 4.lüğü
 
 **Takım: Büke** · **TEKNOFEST · Yapay Zeka Destekli Havayolu Optimizasyonu** · Pyomo + HiGHS (açık-kaynak), tümüyle Python.
 
